@@ -12,10 +12,11 @@ namespace Ej7
         private static double cSumatoria=0;
         static void Main(string[] args)
         {
+            // Se suman los primeros n terminos de la secuencia de Leibniz.
+            // n es CANTIDAD_TERMINOS.
             for (int i = 0; i < CANTIDAD_TERMINOS; i++) cSumatoria += TerminoLeibniz(i);
             Console.WriteLine("La sumatoria de los "+CANTIDAD_TERMINOS+" términos da como resultado: "+cSumatoria*4);
             Console.WriteLine("El error relativo porcentual con respecto a la constante PI es igual a: "+ErrorPorcentual(Math.PI,cSumatoria*4)+"%");
-            // Cuando se ingresa un valor no numérico en consola,
             // El programa espera a que se toque cualquier tecla para cerrarse.
             Console.WriteLine("Apretar cualquier tecla para salir...");
             Console.ReadKey();
